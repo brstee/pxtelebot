@@ -1,1 +1,1 @@
-bot_token=5271273866:AAGATshg5hEi5y6GYs4RQyNHEcQJpafaE20
+bot_token=Token_Của_Bot_Tele
