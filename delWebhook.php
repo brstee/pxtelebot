@@ -1,6 +1,6 @@
 <?php
 
-$token = "5271273866:AAGATshg5hEi5y6GYs4RQyNHEcQJpafaE20";
+$token = "Token_của_telebot";
 $apiURL = "https://api.telegram.org/bot$token/";
 
 $response = file_get_contents($apiURL . "deleteWebhook");
