@@ -98,7 +98,18 @@ if ($commandParts[0] == '/add' && count($commandParts) == 5) {
     } else {
         sendMessage($chatId, "Pixel '$pixel_name' does not exist.");
     }
-} elseif ($commandParts[0] == '/edit' && count($commandParts) == 3) {
+} elseif ($commandParts[0] == '/list') {
+    // Xử lý lệnh /list
+    $message = "List of Pixels:\n";
+    foreach ($config as $pixel_name => $values) {
+        if (is_array($values)) {
+            $message .= "Pixel Name: $pixel_name\n";
+            $message .= "Pixel ID: " . $values['pixel_id'] . "\n\n";
+        }
+    }
+    sendMessage($chatId, $message);
+}
+elseif ($commandParts[0] == '/edit' && count($commandParts) == 3) {
     // Xử lý lệnh /edit
     $old_pixel_name = $commandParts[1];
     $new_pixel_name = $commandParts[2];
